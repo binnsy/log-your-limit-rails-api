@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe 'Authentication API' do
   def user_params
     {
+      nickname: 'alice',
       email: 'alice@example.com',
       password: 'foobarbaz',
       password_confirmation: 'foobarbaz'
@@ -24,8 +25,8 @@ RSpec.describe 'Authentication API' do
 
         parsed_response = JSON.parse(response.body)
         expect(
-          parsed_response['user']['email']
-        ).to eq(user_params[:email])
+          parsed_response['user']['email']['nickname']
+        ).to eq(user_params[:email][:nickname])
       end
     end
   end
@@ -43,8 +44,8 @@ RSpec.describe 'Authentication API' do
 
         parsed_response = JSON.parse(response.body)
         expect(
-          parsed_response['user']['email']
-        ).to eq(user_params[:email])
+          parsed_response['user']['email']['nickname']
+        ).to eq(user_params[:email][:nickname])
         expect(
           parsed_response['user']['token']
         ).not_to be_empty
@@ -106,6 +107,7 @@ end
 RSpec.describe 'Users API' do
   def user_params
     {
+      nickname: 'alice',
       email: 'alice@example.com',
       password: 'foobarbaz',
       password_confirmation: 'foobarbaz'

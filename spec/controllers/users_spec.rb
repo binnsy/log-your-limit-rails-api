@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe UsersController do
   def user_params
     {
+      nickname: 'alice',
       email: 'alice@example.com',
       password: 'foobarbaz',
       password_confirmation: 'foobarbaz'

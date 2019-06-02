@@ -1,0 +1,20 @@
+curl http://localhost:4741/workouts/${ID} \
+  --request PATCH \
+  --include \
+  --header 'Content-Type: application/json' \
+  --header "Authorization: Token token=${TOKEN}" \
+  --data '{
+    "workout": {
+      "user_id": "'"${ID}"'",
+      "date": "'"${DATE}"'",
+      "title": "'"${TITLE}"'",
+      "description": "'"${DESC}"'",
+      "startDate": "'"${STARTDATE}"'",
+      "endDate": "'"${ENDDATE}"'",
+      "date": "'"${DATE}"'",
+      "time": "'"${TIME}"'",
+      "distance": "'"${DIST}"'"
+    }
+  }'
+
+#Fields will overwrite on an update if left blank in one of the fields
