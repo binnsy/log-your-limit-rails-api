@@ -17,7 +17,7 @@ class WorkoutsController < ProtectedController
 
   # POST /workouts
   def create
-    @workout = current_user.workouts.find(workout_params)
+    @workout = current_user.workouts.build(workout_params)
 
     if @workout.save
       render json: @workout, status: :created
@@ -42,13 +42,13 @@ class WorkoutsController < ProtectedController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_workout
-      @workout = current_user.workouts.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_workout
+    @workout = current_user.workouts.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def workout_params
-      params.require(:workout).permit(:user_id, :title, :description, :date, :startDate, :endDate, :distance, :time)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def workout_params
+    params.require(:workout).permit(:title, :description, :date, :startDate, :endDate, :distance, :time, :user_id)
+  end
 end

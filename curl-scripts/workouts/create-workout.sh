@@ -7,7 +7,6 @@ curl "http://localhost:4741/workouts" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "workout": {
-      "user_id": "'"${ID}"'",
       "date": "'"${DATE}"'",
       "title": "'"${TITLE}"'",
       "description": "'"${DESC}"'",

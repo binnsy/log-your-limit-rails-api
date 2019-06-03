@@ -1,4 +1,4 @@
 class Workout < ApplicationRecord
-  belongs_to :users
-  validates :workout, :user, presence: true
+  belongs_to :user
+  # validates :workout, :user, presence: true
 end

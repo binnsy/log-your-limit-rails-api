@@ -1,5 +1,5 @@
 class WorkoutSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :title, :description, :date, :startDate, :endDate, :distance, :time
+  attributes :id, :title, :description, :date, :startDate, :endDate, :distance, :time, :user_id
   has_one :user
 
   def editable
