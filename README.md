@@ -1,4 +1,7 @@
 
+
+![Screen Shot 2019-06-07 at 8 27 55 AM](https://user-images.githubusercontent.com/27842159/59103981-4b6cc100-88fe-11e9-9c09-a6b6f261cabe.png)
+
 # Log Your Limit
 
 I created an app that logs your workouts.
@@ -63,4 +66,55 @@ I think my biggest challenge came from adding nickname to my auth. I somehow ran
 -	include a pace calculator
 -	calculate some data
 
-![Screen Shot 2019-06-07 at 8 27 55 AM](https://user-images.githubusercontent.com/27842159/59103981-4b6cc100-88fe-11e9-9c09-a6b6f261cabe.png)
+<table style="width:100%">
+  <tr>
+    <th>Verb</th>
+    <th>URI Pattern</th>
+    <th>Controller #Action</th>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/sign-up</td>
+    <td>users.post/sign-up</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/sign-in</td>
+    <td>users.post/sign-in</td>
+  </tr>
+  <tr>
+    <td>PATCH</td>
+    <td>/change-password</td>
+    <td>users.post/change-password</td>
+  </tr>
+  <tr>
+    <td>DELETE</td>
+    <td>/sign-out</td>
+    <td>users.delete/sign-out</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/workouts</td>
+    <td>create</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/workouts</td>
+    <td>workouts#index</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/workouts/:id</td>
+    <td>workouts#show</td>
+  </tr>
+  <tr>
+    <td>PATCH</td>
+    <td>/workouts/:id</td>
+    <td>workouts#update</td>
+  </tr>
+  <tr>
+    <td>DELETE</td>
+    <td>/workouts/:id</td>
+    <td>workouts#destroy</td>
+  </tr>
+</table>
