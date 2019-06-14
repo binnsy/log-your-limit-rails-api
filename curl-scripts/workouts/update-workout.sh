@@ -8,8 +8,8 @@ curl http://localhost:4741/workouts/${ID} \
       "date": "'"${DATE}"'",
       "title": "'"${TITLE}"'",
       "description": "'"${DESC}"'",
-      "startDate": "'"${STARTDATE}"'",
-      "endDate": "'"${ENDDATE}"'",
+      "start": "'"${start}"'",
+      "end": "'"${end}"'",
       "date": "'"${DATE}"'",
       "time": "'"${TIME}"'",
       "distance": "'"${DIST}"'"
