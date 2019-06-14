@@ -6,8 +6,8 @@ class CreateWorkouts < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.date :date
-      t.date :startDate
-      t.date :endDate
+      t.date :start
+      t.date :end
       t.string :distance
       t.string :time
 
