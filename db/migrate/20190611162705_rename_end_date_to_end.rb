@@ -1,5 +1,5 @@
-class RenameendToEnd < ActiveRecord::Migration[5.2]
+class RenameEndDateToEnd < ActiveRecord::Migration[5.2]
   def change
-      rename_column :workouts, :end, :end
+      rename_column :workouts, :endDate, :end
   end
 end
