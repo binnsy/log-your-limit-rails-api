@@ -1,5 +1,5 @@
-class RenamestartToStart < ActiveRecord::Migration[5.2]
+class RenameStartDateToStart < ActiveRecord::Migration[5.2]
   def change
-    rename_column :workouts, :start, :start
+    rename_column :workouts, :startDate, :start
   end
 end
