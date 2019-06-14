@@ -40,13 +40,13 @@ ActiveRecord::Schema.define(version: 2019_06_11_162705) do
     t.string "title"
     t.string "description"
     t.date "date"
-    t.date "start"
     t.date "end"
     t.string "distance"
     t.string "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.date "start"
     t.index ["user_id"], name: "index_workouts_on_user_id"
   end
 
