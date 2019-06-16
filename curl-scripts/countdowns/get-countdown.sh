@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/workouts" \
+curl "http://localhost:4741/countdowns" \
   --include \
   --request GET \
   --header "Authorization: Token token=${TOKEN}"

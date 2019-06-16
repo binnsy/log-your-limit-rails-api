@@ -1,18 +1,12 @@
-curl http://localhost:4741/workouts/${ID} \
+curl http://localhost:4741/countdowns/${ID} \
   --request PATCH \
   --include \
   --header 'Content-Type: application/json' \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "workout": {
+    "countdown": {
       "date": "'"${DATE}"'",
-      "title": "'"${TITLE}"'",
-      "description": "'"${DESC}"'",
-      "start": "'"${START}"'",
-      "end": "'"${END}"'",
-      "date": "'"${DATE}"'",
-      "time": "'"${TIME}"'",
-      "distance": "'"${DIST}"'"
+      "title": "'"${TITLE}"'"
     }
   }'
 

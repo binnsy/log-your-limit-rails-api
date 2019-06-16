@@ -1,4 +1,4 @@
-class CountdownsController < ApplicationController
+class CountdownsController < ProtectedController
   before_action :set_countdown, only: [:show, :update, :destroy]
 
   # GET /countdowns
