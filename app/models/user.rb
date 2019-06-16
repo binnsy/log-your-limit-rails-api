@@ -3,5 +3,6 @@
 class User < ApplicationRecord
   include Authentication
   has_many :examples
+  has_many :countdowns
   has_many :workouts
 end
